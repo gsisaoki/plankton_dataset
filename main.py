@@ -18,15 +18,12 @@ crowd_img_count = 0
 species_names = []
 save_img_num = 0
 
-# path to the cvat zipfiles 
-task_zip_paths = glob.glob('/home/jaxa/hayakawa/plankton_monitoring/plankton_dataset/github_resource/cvat_sample/x' + ver + '/*.zip')
-# task_zip_paths = glob.glob('/home/jaxa/hayakawa/plankton_monitoring/plankton_dataset/cvat_' + ver + '_202404/*.zip')
-# task_zip_paths = glob.glob('/PATH/*.zip')
+# path to cvat zipfiles
+task_zip_paths = glob.glob('/PATH/*.zip')
 task_zip_paths = sorted(task_zip_paths)
 
-# path to the save dir
-save_dir_path = '/home/jaxa/hayakawa/plankton_monitoring/plankton_dataset/github_resource/data_sample/x' + ver
-# save_dir_path = '/PATH'
+# path to save dir
+save_dir_path = '/PATH'
 
 
 # make save dir
@@ -56,7 +53,7 @@ for task_zip_path in task_zip_paths:
                 anno = line.strip()
                 anno_list = [name.strip() for name in anno.split(',')]
                 anno_name = ','.join(anno_list)
-                wb = openpyxl.load_workbook('/home/jaxa/hayakawa/plankton_monitoring/plankton_dataset/github_resource/anno_name_list.xlsx')
+                wb = openpyxl.load_workbook('/PATH/anno_name_list.xlsx') # path to anno_name list 
                 sheet = wb['Sheet1']
                 first_row = sheet['A']
                 column = ['C','D','E','F','G','H','I']
@@ -77,7 +74,7 @@ for task_zip_path in task_zip_paths:
                         unknown_flag = 0
                         for i in range(5):
                             if unknown_flag == 1:
-                                if i == 4: # if anno_name contains a growth process or sex, add a suffix to distinguish
+                                if i == 4:  # if anno_name contains a growth process or sex, add a suffix to distinguish
                                     growth = ['male','female','juvenile'] 
                                     for name in growth:
                                         anno_growth_name = anno_name.split(',')[-1].strip()
@@ -96,15 +93,15 @@ for task_zip_path in task_zip_paths:
                                 else:
                                     class_name = sheet[column[i] + str(row_number)].value
 
-                                    if class_name == None  and sheet[column[-2] + str(row_number)].value != None:   #stageあり，かつunknown
+                                    if class_name == None  and sheet[column[-2] + str(row_number)].value != None:   #class_name unknown,with stage
                                         class_name = stage[i] + '_unk_' + sheet[column[-2] + str(row_number)].value + '_stage'
                                         unknown_flag += 1
-                                    elif class_name == None and i!= 0:    # stageなし，かつ門以外でunknwon
+                                    elif class_name == None and i!= 0:    # class_name unknown,without stage
                                         class_name = stage[i] + '_unk'
                                         unknown_flag += 1
-                                    elif i == 4 and sheet[column[-2] + str(row_number)].value != None:  # stageあり，かつknown
+                                    elif i == 4 and sheet[column[-2] + str(row_number)].value != None:  # class_name known,with stage 
                                         class_name = class_name + '_' + sheet[column[-2] + str(row_number)].value + '_stage'
-                                    elif i == 4 and sheet[column[-1] + str(row_number)].value != None:  # subsp.あり，かつknown
+                                    elif i == 4 and sheet[column[-1] + str(row_number)].value != None:  # class_name known,with subsp
                                         subsp = sheet[column[-1] + str(row_number)].value
                                         
 
@@ -190,7 +187,7 @@ for task_zip_path in task_zip_paths:
 
         # get collection point and date from taskinfo-file using taskname
         task_name = (task_dir.split('/')[-1])[5:-29] # taskname without time stamp
-        wb = openpyxl.load_workbook('/home/jaxa/hayakawa/plankton_monitoring/plankton_dataset/github_resource/cvat_taskinfo.xlsx')
+        wb = openpyxl.load_workbook('/PATH/cvat_taskinfo.xlsx') # path to cvat taskinfo
         sheet = wb['x' + ver] 
         for row in sheet.iter_rows(min_row=2, values_only=True):
             if row[4] is not None and task_name == str(row[4]).strip().lower():
