@@ -1,0 +1,2 @@
+data/obj_train_data/72_r.jpg
+data/obj_train_data/72_l.jpg

@@ -1,0 +1,41 @@
+img_id,class,order,family,genus,species,subsp,note,crowd_img,cx,cy,rw,rh,point,採集地,採集日,task_name
+000000,Branchiopoda,Diplostraca,Bosminidae,Bosminopsis,Bosminopsis deitersi,,,72_r.jpg,0.334325,0.824028,0.025708,0.027738,oododam,大渡ダム,"2022.06,10",72
+000001,Branchiopoda,Diplostraca,Daphniidae,Daphnia,Daphnia galeata,,,72_r.jpg,0.066993,0.719156,0.020302,0.035783,oododam,大渡ダム,"2022.06,10",72
+000002,Branchiopoda,Diplostraca,Bosminidae,Bosminopsis,Bosminopsis deitersi,,,72_r.jpg,0.100588,0.733033,0.025708,0.027738,oododam,大渡ダム,"2022.06,10",72
+000003,Eurotatoria,Ploima,Synchaetidae,Ploesoma,Ploesoma truncatum,,,72_r.jpg,0.113533,0.317481,0.007648,0.006813,oododam,大渡ダム,"2022.06,10",72
+000004,Branchiopoda,Diplostraca,Bosminidae,Bosminopsis,Bosminopsis deitersi,,,72_r.jpg,0.157376,0.398498,0.014189,0.017448,oododam,大渡ダム,"2022.06,10",72
+000005,Branchiopoda,Diplostraca,Bosminidae,Bosmina,Bosmina longirostris,,,72_r.jpg,0.041894,0.685712,0.027039,0.023498,oododam,大渡ダム,"2022.06,10",72
+000006,Branchiopoda,Diplostraca,Bosminidae,Bosminopsis,Bosminopsis deitersi,,,72_r.jpg,0.479067,0.664985,0.01656,0.022581,oododam,大渡ダム,"2022.06,10",72
+000007,Branchiopoda,Diplostraca,Bosminidae,Bosminopsis,Bosminopsis deitersi,,,72_r.jpg,0.039844,0.105592,0.017682,0.02094,oododam,大渡ダム,"2022.06,10",72
+000008,Branchiopoda,Diplostraca,Bosminidae,Bosmina,Bosmina longirostris,,,72_r.jpg,0.278402,0.151484,0.018622,0.019574,oododam,大渡ダム,"2022.06,10",72
+000009,Branchiopoda,Diplostraca,Bosminidae,Bosmina,Bosmina longirostris,,,72_r.jpg,0.702617,0.445059,0.02273,0.023871,oododam,大渡ダム,"2022.06,10",72
+000010,Eurotatoria,Ploima,Synchaetidae,Polyarthra,Sp._unk,,,72_r.jpg,0.36017,0.063267,0.009706,0.012168,oododam,大渡ダム,"2022.06,10",72
+000011,Branchiopoda,Diplostraca,Bosminidae,Bosmina,Bosmina longirostris,,,72_r.jpg,0.241552,0.186467,0.018509,0.020235,oododam,大渡ダム,"2022.06,10",72
+000012,Branchiopoda,Diplostraca,Bosminidae,Bosminopsis,Bosminopsis deitersi,,,72_r.jpg,0.236474,0.644816,0.025707,0.027738,oododam,大渡ダム,"2022.06,10",72
+000013,Branchiopoda,Diplostraca,Bosminidae,Bosminopsis,Bosminopsis deitersi,,,72_r.jpg,0.537252,0.683041,0.020737,0.025625,oododam,大渡ダム,"2022.06,10",72
+000014,Branchiopoda,Diplostraca,Daphniidae,Daphnia,Daphnia galeata,,,72_r.jpg,0.825647,0.181203,0.04305,0.072705,oododam,大渡ダム,"2022.06,10",72
+000015,Branchiopoda,Diplostraca,Bosminidae,Bosminopsis,Bosminopsis deitersi,,,72_r.jpg,0.509474,0.749849,0.011782,0.020607,oododam,大渡ダム,"2022.06,10",72
+000016,Branchiopoda,Diplostraca,Bosminidae,Bosminopsis,Bosminopsis deitersi,,,72_r.jpg,0.137976,0.430463,0.025708,0.027738,oododam,大渡ダム,"2022.06,10",72
+000017,Branchiopoda,Diplostraca,Bosminidae,Bosminopsis,Bosminopsis deitersi,,,72_r.jpg,0.262885,0.276073,0.020745,0.018217,oododam,大渡ダム,"2022.06,10",72
+000018,Branchiopoda,Diplostraca,Bosminidae,Bosminopsis,Bosminopsis deitersi,,,72_r.jpg,0.304472,0.318399,0.016338,0.017688,oododam,大渡ダム,"2022.06,10",72
+000019,Branchiopoda,Diplostraca,Chydoridae,Chydorus,Chydorus brevilabris,,,72_r.jpg,0.084162,0.046438,0.011461,0.013098,oododam,大渡ダム,"2022.06,10",72
+000020,Branchiopoda,Diplostraca,Daphniidae,Daphnia,Daphnia galeata,,,72_r.jpg,0.910249,0.425098,0.04979,0.022659,oododam,大渡ダム,"2022.06,10",72
+000021,Branchiopoda,Diplostraca,Bosminidae,Bosminopsis,Bosminopsis deitersi,,,72_l.jpg,0.882163,0.818963,0.020308,0.027337,oododam,大渡ダム,"2022.06,10",72
+000022,Branchiopoda,Diplostraca,Bosminidae,Bosminopsis,Bosminopsis deitersi,,,72_l.jpg,0.839004,0.789907,0.022703,0.025907,oododam,大渡ダム,"2022.06,10",72
+000023,Branchiopoda,Diplostraca,Bosminidae,Bosmina,Bosmina longirostris,,,72_l.jpg,0.088193,0.198217,0.018718,0.018381,oododam,大渡ダム,"2022.06,10",72
+000024,Branchiopoda,Diplostraca,Bosminidae,Bosminopsis,Bosminopsis deitersi,,,72_l.jpg,0.139501,0.845676,0.018348,0.025572,oododam,大渡ダム,"2022.06,10",72
+000025,Eurotatoria,Ploima,Synchaetidae,Polyarthra,Sp._unk,,,72_l.jpg,0.439632,0.665095,0.012988,0.013809,oododam,大渡ダム,"2022.06,10",72
+000026,Eurotatoria,Flosculariaceae,Conochilidae,Conochilus,Sp._unk,,,72_l.jpg,0.961394,0.743962,0.00501,0.00736,oododam,大渡ダム,"2022.06,10",72
+000027,Branchiopoda,Diplostraca,Chydoridae,Chydorus,Chydorus brevilabris,,,72_l.jpg,0.674811,0.733515,0.011516,0.018464,oododam,大渡ダム,"2022.06,10",72
+000028,Branchiopoda,Diplostraca,Bosminidae,Bosminopsis,Bosminopsis deitersi,,,72_l.jpg,0.132122,0.665868,0.022411,0.021737,oododam,大渡ダム,"2022.06,10",72
+000029,Eurotatoria,Flosculariaceae,Conochilidae,Conochilus,Sp._unk,,,72_l.jpg,0.131416,0.548075,0.006252,0.00895,oododam,大渡ダム,"2022.06,10",72
+000030,Branchiopoda,Diplostraca,Daphniidae,Daphnia,Daphnia ambigua,,,72_l.jpg,0.234691,0.57284,0.039896,0.074187,oododam,大渡ダム,"2022.06,10",72
+000031,Eurotatoria,Flosculariaceae,Conochilidae,Conochilus,Sp._unk,,,72_l.jpg,0.156945,0.604095,0.008925,0.00879,oododam,大渡ダム,"2022.06,10",72
+000032,Branchiopoda,Diplostraca,Bosminidae,Bosmina,Bosmina longirostris,,,72_l.jpg,0.070813,0.172716,0.018718,0.018381,oododam,大渡ダム,"2022.06,10",72
+000033,Copepoda,Cyclopoida,Fa._unk_copepodid_stage,Fa._unk_copepodid_stage,Fa._unk_copepodid_stage,,,72_l.jpg,0.63992,0.397445,0.024744,0.019895,oododam,大渡ダム,"2022.06,10",72
+000034,Branchiopoda,Diplostraca,Bosminidae,Bosminopsis,Bosminopsis deitersi,,,72_l.jpg,0.926748,0.939479,0.026466,0.029629,oododam,大渡ダム,"2022.06,10",72
+000035,Eurotatoria,Ploima,Brachionidae,Keratella,Keratella quadrata,,,72_l.jpg,0.493799,0.800311,0.011001,0.010741,oododam,大渡ダム,"2022.06,10",72
+000036,Copepoda,Or._unk_naupliar_stage,Or._unk_naupliar_stage,Or._unk_naupliar_stage,Or._unk_naupliar_stage,,,72_l.jpg,0.516565,0.639011,0.012223,0.01074,oododam,大渡ダム,"2022.06,10",72
+000037,Eurotatoria,Ploima,Lecanidae,Lecane,Lecane flexilis,,,72_l.jpg,0.096751,0.479389,0.006114,0.004555,oododam,大渡ダム,"2022.06,10",72
+000038,Branchiopoda,Diplostraca,Chydoridae,Chydorus,Chydorus brevilabris,,,72_l.jpg,0.802122,0.414621,0.010947,0.014456,oododam,大渡ダム,"2022.06,10",72
+000039,Copepoda,Or._unk_naupliar_stage,Or._unk_naupliar_stage,Or._unk_naupliar_stage,Or._unk_naupliar_stage,,,72_l.jpg,0.45942,0.67392,0.012223,0.01074,oododam,大渡ダム,"2022.06,10",72
