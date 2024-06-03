@@ -1,4 +1,4 @@
-# plankton_dataset
+# Plankton_Dataset
 cvatのアノテーションデータを用いた，プランクトン画像の切り出し・データセット作成
 
 # Preparation
