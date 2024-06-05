@@ -1,4 +1,4 @@
-<img src="{https://github.com/hayakawa-domi/plankton_dataset/assets/129620031/4d8513b1-8adf-4008-81f1-1200ef0df4fc}" width="50%" />
+<img src="https://github.com/hayakawa-domi/plankton_dataset/assets/129620031/4d8513b1-8adf-4008-81f1-1200ef0df4fc" width="50%" />
 
 # Plankton_Dataset
 cvat におけるアノテーションデータを用いた，プランクトン個体画像の切り出し，データセット作成
