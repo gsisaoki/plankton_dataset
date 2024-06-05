@@ -1,3 +1,5 @@
+![github_readme_img](https://github.com/hayakawa-domi/plankton_dataset/assets/129620031/4d8513b1-8adf-4008-81f1-1200ef0df4fc)
+
 # Plankton_Dataset
 cvat におけるアノテーションデータを用いた，プランクトン個体画像の切り出し，データセット作成
 
