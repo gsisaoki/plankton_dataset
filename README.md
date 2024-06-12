@@ -1,7 +1,7 @@
 <img src="https://github.com/hayakawa-domi/plankton_dataset/assets/129620031/4d8513b1-8adf-4008-81f1-1200ef0df4fc" width="60%" />
 
 # Plankton_Dataset
-Image cropping and dataset creation of individual plankton images using annotation data in CVAT(Computer Vision Annotation Tool).
+Image cropping and dataset creation of individual plankton using annotation data in CVAT(Computer Vision Annotation Tool).
 
 # Preparation
 1. Prepare annotated task data in cvat, such as the zip file in cvat_sample/x(40 or 100). (Select YOLO 1.1 in Export task dataset → Export format)
