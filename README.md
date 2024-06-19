@@ -4,7 +4,8 @@
 Image cropping and dataset creation of individual plankton using annotation data in CVAT(Computer Vision Annotation Tool).
 
 # Preparation
-1. Prepare annotated task data of cvat (not necessary if you use the data we provided). If you use your data, you need to output the data from cvat as follows: Select YOLO 1.1 in Export task dataset → Export format  
+1. Prepare annotated task data of cvat (not necessary if you use the data we provided).  
+If you use your data, you need to output the data from cvat as follows: Select YOLO 1.1 in Export task dataset → Export format  
 See example zip file in <a href="cvat_sample/"> cvat_sample/x(40 or 100)</a> .
 2. Prepare the following files covering the target tasks and target annotations.
    - Task information file (cvat_taskinfo) that includes plankton collection locations, etc.
