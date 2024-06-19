@@ -11,7 +11,7 @@ See example zip file in <a href="cvat_sample/"> cvat_sample/x(40 or 100).
    - Annotation name file (anno_name_list) containing labels for each classification class.  
 You need to add the data to the downloadable file on [Google Drive](https://drive.google.com/drive/folders/16x4IDIFmGJeLQr1QsCbYQzQU1KGDpJyC?usp=sharing) or create your own file as necessary.  
 3. Crop images and create anno_list can be performed by replacing the path written “PATH” in main.py with the appropriate one.
-4. Please refer to the sample directory ( <a herf="data_sample/"> data_sample/x(40 or 100) ) of the created dataset.
+4. Please refer to the sample directory <a herf="data_sample/"> data_sample/x(40 or 100) of the created dataset.
 
 
 # Dataset
