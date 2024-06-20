@@ -20,14 +20,18 @@ species_names = []
 
 root_dir = os.path.dirname(__file__)
 
-parser = argparse.ArgumentParser()
+def get_arg_parse():
+    parser = argparse.ArgumentParser()
 
-parser.add_argument('--cvat', '-c', type=str, default='cvat_40') # cvat files dir
-parser.add_argument('--save', '-s', type=str, default='debug') # save dir
-parser.add_argument('--mag', '-x', type=str, default='40') # cvat data's magnification x(40 or 100)
+    parser.add_argument('--cvat', '-c', type=str, default='cvat_40_202404') # cvat files dir
+    parser.add_argument('--save', '-s', type=str, default='debug') # save dir
+    parser.add_argument('--mag', '-x', type=str, default='40') # cvat data's magnification (x40 or x100) 
 
-args = parser.parse_args()
+    args = parser.parse_args()
+    return args
 
+
+args = get_arg_parse()
 
 # path to cvat zipfiles
 task_zip_paths = glob.glob(os.path.join(root_dir, args.cvat, '*.zip'))
@@ -64,7 +68,8 @@ for task_zip_path in task_zip_paths:
                 anno = line.strip()
                 anno_list = [name.strip() for name in anno.split(',')]
                 anno_name = ','.join(anno_list)
-                wb = openpyxl.load_workbook(os.path.join(root_dir, 'anno_name_list.xlsx')) # path to anno_name list 
+                wb = openpyxl.load_workbook(os.path.join(root_dir, 'anno_name_list_202405.xlsx')) # path to anno_name list 
+                # wb = openpyxl.load_workbook(os.path.join(root_dir, 'anno_name_list.xlsx')) # path to anno_name list 
                 sheet = wb['Sheet1']
                 first_row = sheet['A']
                 column = ['C','D','E','F','G','H','I']
