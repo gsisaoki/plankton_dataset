@@ -129,12 +129,10 @@ for task_zip_path in task_zip_paths:
                                    
                                 name_level.append(class_name.lower().strip())
 
-
                         class_name = ','.join(name_level)
                         all_header.append([n.capitalize() for n in name_level])
                         name_get_flag += 1
 
-                
                 if class_name == 'a': #debug
                     import pdb;
                     pdb.set_trace()
@@ -145,12 +143,10 @@ for task_zip_path in task_zip_paths:
                 subsps.append(subsp) 
                 remarks.append(remark) 
 
-
         task_data, path_data,label_data,point_data,crop_data,point_data,id_data = [],[],[],[],[],[],[]
         subsp_data,remark_data = [],[]
         point_name = []
         data= []
-
 
 
         img_paths = glob.glob(os.path.join(obj_dir, '*.jpg'))    
@@ -176,7 +172,6 @@ for task_zip_path in task_zip_paths:
                 id_data.append([f'{img_id:06d}'])
                 subsp_data.append([subsps[int(class_id)]])
                 remark_data.append([remarks[int(class_id)]])
-
 
                 # when saving all cropped img
                 os.makedirs(cropped_img_dir, exist_ok=True)
