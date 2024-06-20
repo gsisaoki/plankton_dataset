@@ -64,8 +64,7 @@ for task_zip_path in task_zip_paths:
                 anno = line.strip()
                 anno_list = [name.strip() for name in anno.split(',')]
                 anno_name = ','.join(anno_list)
-                wb = openpyxl.load_workbook(os.path.join(root_dir, 'anno_name_list_202405.xlsx')) # path to anno_name list 
-                # wb = openpyxl.load_workbook(os.path.join(root_dir, 'anno_name_list.xlsx')) # path to anno_name list 
+                wb = openpyxl.load_workbook(os.path.join(root_dir, 'anno_name_list.xlsx')) # path to anno_name list 
                 sheet = wb['Sheet1']
                 first_row = sheet['A']
                 column = ['C','D','E','F','G','H','I']
@@ -199,8 +198,7 @@ for task_zip_path in task_zip_paths:
 
         # get collection point and date from taskinfo-file using taskname
         task_name = (task_dir.split('/')[-1])[5:-29] # taskname without time stamp
-        wb = openpyxl.load_workbook(os.path.join(root_dir, 'cvat_taskinfo_20231115_mod.xlsx')) # path to cvat taskinfo
-        # wb = openpyxl.load_workbook(os.path.join(root_dir, 'cvat_taskinfo.xlsx')) # path to cvat taskinfo
+        wb = openpyxl.load_workbook(os.path.join(root_dir, 'cvat_taskinfo.xlsx')) # path to cvat taskinfo
         sheet = wb['x' + args.mag] 
         for row in sheet.iter_rows(min_row=2, values_only=True):
             if row[4] is not None and task_name == str(row[4]).strip().lower():
