@@ -5,32 +5,43 @@ from PIL import Image
 import os
 import openpyxl
 import csv
+import argparse
 
 # to avoid DecompressionBombWarining
 Image.MAX_IMAGE_PIXELS = 1000000000
 
-ver = '40' # 40 or 100
-class_names = []
-all_header = []
 img_id = 0
 task_count = 0
 crowd_img_count = 0
-species_names = []
 save_img_num = 0
+class_names = []
+all_header = []
+species_names = []
+
+root_dir = os.path.dirname(__file__)
+
+parser = argparse.ArgumentParser()
+
+parser.add_argument('--cvat', '-c', type=str, default='cvat_40_202404') # cvat files dir
+parser.add_argument('--save', '-s', type=str, default='debug') # save dir
+parser.add_argument('--mag', '-x', type=str, default='40') # cvat data's magnification (x40 or x100) 
+
+args = parser.parse_args()
+
 
 # path to cvat zipfiles
-task_zip_paths = glob.glob('/PATH/*.zip')
+task_zip_paths = glob.glob(os.path.join(root_dir, args.cvat, '*.zip'))
 task_zip_paths = sorted(task_zip_paths)
 
 # path to save dir
-save_dir_path = '/PATH'
+save_dir_path = os.path.join(root_dir, args.save)
 
 
 # make save dir
 if not os.path.exists(save_dir_path):
     os.makedirs(save_dir_path)
 # make header for anno_list
-with open(save_dir_path + '/anno_list_' + ver + '.csv', mode='w',newline='',encoding='utf-8') as f:
+with open(save_dir_path + '/anno_list_' + args.mag + '.csv', mode='w',newline='',encoding='utf-8') as f:
     writer = csv.writer(f)
     header = ['img_id','class','order','family','genus','species','subsp','note','crowd_img','cx','cy','rw','rh','point','採集地','採集日','task_name']
     writer.writerow(header)
@@ -53,7 +64,8 @@ for task_zip_path in task_zip_paths:
                 anno = line.strip()
                 anno_list = [name.strip() for name in anno.split(',')]
                 anno_name = ','.join(anno_list)
-                wb = openpyxl.load_workbook('/PATH/anno_name_list.xlsx') # path to anno_name list 
+                wb = openpyxl.load_workbook(os.path.join(root_dir, 'anno_name_list_202405.xlsx')) # path to anno_name list 
+                # wb = openpyxl.load_workbook(os.path.join(root_dir, 'anno_name_list.xlsx')) # path to anno_name list 
                 sheet = wb['Sheet1']
                 first_row = sheet['A']
                 column = ['C','D','E','F','G','H','I']
@@ -154,7 +166,7 @@ for task_zip_path in task_zip_paths:
                 left, upper, right, lower = int((cx-rw/2)*width), int((cy-rh/2)*height), int((cx+rw/2)*width), int((cy+rh/2)*height)
                 img_crop = img.crop((left, upper, right, lower))
 
-                cropped_img_dir = os.path.join(save_dir_path,'images_' + ver, id2name[int(class_id)])
+                cropped_img_dir = os.path.join(save_dir_path,'images_' + args.mag, id2name[int(class_id)])
                 
                 path_data.append([img_path.split('/')[-1]])
                 label_data.append(id2name[int(class_id)].split(','))
@@ -187,8 +199,9 @@ for task_zip_path in task_zip_paths:
 
         # get collection point and date from taskinfo-file using taskname
         task_name = (task_dir.split('/')[-1])[5:-29] # taskname without time stamp
-        wb = openpyxl.load_workbook('/PATH/cvat_taskinfo.xlsx') # path to cvat taskinfo
-        sheet = wb['x' + ver] 
+        wb = openpyxl.load_workbook(os.path.join(root_dir, 'cvat_taskinfo_20231115_mod.xlsx')) # path to cvat taskinfo
+        # wb = openpyxl.load_workbook(os.path.join(root_dir, 'cvat_taskinfo.xlsx')) # path to cvat taskinfo
+        sheet = wb['x' + args.mag] 
         for row in sheet.iter_rows(min_row=2, values_only=True):
             if row[4] is not None and task_name == str(row[4]).strip().lower():
                 point_ja = row[5]
@@ -196,7 +209,7 @@ for task_zip_path in task_zip_paths:
                 point = row[10]
 
         # add data to anno_list
-        with open(save_dir_path + '/anno_list_' + ver + '.csv', mode='a',newline='',encoding='utf-8') as f:
+        with open(save_dir_path + '/anno_list_' + args.mag + '.csv', mode='a',newline='',encoding='utf-8') as f:
             writer = csv.writer(f)
             for i in range(len(path_data)):
                 data = id_data[i] + label_data[i] + subsp_data[i] + remark_data[i] + path_data[i] + crop_data[i] + [point] + [point_ja] + [date] + [task_name]
