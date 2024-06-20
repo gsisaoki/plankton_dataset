@@ -17,8 +17,8 @@ You need to add the data to the downloadable files on [Google Drive](https://dri
   - Annotation name file (anno_name_list) containing labels for each classification class.<br>
 
 3. Crop images and create anno_list can be performed by running the following command.<br>
-`python main.py` <br>
-Refer to <a href="main.py"> main.py</a> and rewrite options if necessary. (--cvat: cvat data directory, --save: destination, --mag: magnification of cvat data.)
+` python main.py -c 'cvat_sample/x40' -s 'data_sample' -x 40 ` <br>
+Refer to <a href="main.py"> main.py</a> and rewrite options if necessary. (-c: cvat data directory, -s: save dir, -x: magnification of cvat data.)
 5. Please refer to the sample directory ( <a href="data_sample/"> data_sample/x(40 or 100)</a> ) of the created dataset.
 
 
