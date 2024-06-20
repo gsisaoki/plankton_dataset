@@ -16,7 +16,7 @@ You need to add the data to the downloadable files on [Google Drive](https://dri
   - Task information file (cvat_taskinfo) that includes plankton collection locations, etc.<br>
   - Annotation name file (anno_name_list) containing labels for each classification class.<br>
 
-3. Crop images and create anno_list can be performed by replacing the path written “PATH” in main.py with the appropriate one.
+3. Crop images and create anno_list can be performed by running the following command.　Refer to <a href="main.py"> main.py</a> and rewrite if necessary so that --cvat:cvat data directory, --save:destination, --mag:magnification of cvat data.
 4. Please refer to the sample directory ( <a href="data_sample/"> data_sample/x(40 or 100)</a> ) of the created dataset.
 
 
