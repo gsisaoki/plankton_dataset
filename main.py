@@ -22,9 +22,9 @@ root_dir = os.path.dirname(__file__)
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument('--cvat', '-c', type=str, default='cvat_40_202404') # cvat files dir
+parser.add_argument('--cvat', '-c', type=str, default='cvat_40') # cvat files dir
 parser.add_argument('--save', '-s', type=str, default='debug') # save dir
-parser.add_argument('--mag', '-x', type=str, default='40') # cvat data's magnification (x40 or x100) 
+parser.add_argument('--mag', '-x', type=str, default='40') # cvat data's magnification x(40 or 100)
 
 args = parser.parse_args()
 
