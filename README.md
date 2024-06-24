@@ -6,19 +6,20 @@ Image cropping and dataset creation of individual plankton using annotation data
 # Preparation
 1. Prepare annotated task data of cvat (not necessary if you use the data we provided).  
 If you use your data, you need to output the data from cvat as follows:  
-As shown in the following images, select YOLO 1.1 in Export task dataset → Export format and check Save images.<br>
+Select YOLO 1.1 in Export task dataset → Export format and check Save images as shown in the following images.<br>
 See example zip file in <a href="cvat_sample/"> cvat_sample/x(40 or 100)</a> . <br>
 <img src="https://github.com/gsisaoki/plankton_dataset/assets/129620031/00eb341b-4a16-412f-9ed8-2272452778ac" width="338" height="150" />
 <img src="https://github.com/gsisaoki/plankton_dataset/assets/129620031/48e1635b-5b21-44d6-8be4-32a6a4dcb176" width="225" height="150" /> <br>  
 
-2. Prepare the following files covering the target tasks and target annotations.<br>
-You need to add the data to the downloadable files on [Google Drive](https://drive.google.com/drive/folders/16x4IDIFmGJeLQr1QsCbYQzQU1KGDpJyC?usp=sharing) or create your own files as necessary.  
-  - Task information file (cvat_taskinfo) that includes plankton collection locations, etc.<br>
-  - Annotation name file (anno_name_list) containing labels for each classification class.<br>
+2. Prepare the following two files containing the target tasks and target annotations.<br>
+If you want to use your own data, you need to write the required information in anno_name_list.xlsx and cvat_taskinfo.xlsx which you download from [Google Drive](https://drive.google.com/drive/folders/16x4IDIFmGJeLQr1QsCbYQzQU1KGDpJyC?usp=sharing).
+  - Task information file (cvat_taskinfo.xlsx) including where to collect plankton, etc.<br>
+  - Annotation name file (anno_name_list.xlsx) containing class labels for each plankton.<br>
 
-3. Crop images and create anno_list can be performed by running the following command.<br>
+3. Run <a href="main.py"> main.py</a> to crop images and create anno_list as follows: <br>
 ` python main.py -c 'cvat_sample/x40' -s 'data_sample' -x 40 ` <br>
-Refer to <a href="main.py"> main.py</a> (line 25-27) and rewrite options if necessary. <br>(-c: cvat data directory, -s: save directory, -x: magnification of cvat data.)
+(-c: cvat data directory, -s: save directory, -x: magnification of cvat data.) <br>
+Please refer to <a href="main.py"> main.py</a> (line 25-27) and rewrite options if necessary. 
 5. Please refer to the sample directory ( <a href="data_sample/"> data_sample/x(40 or 100)</a> ) of the created dataset.
 
 
